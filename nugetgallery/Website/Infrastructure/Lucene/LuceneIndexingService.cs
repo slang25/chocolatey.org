@@ -133,7 +133,7 @@ namespace NuGetGallery
 
             if (!String.IsNullOrEmpty(package.Tags))
             {
-                field = new Field("Tags", package.Tags, Field.Store.NO, Field.Index.ANALYZED);
+                field = new Field("Tags", package.Tags, Field.Store.NO, Field.Index.NOT_ANALYZED);
                 field.SetBoost(0.8f);
                 document.Add(field);
             }
